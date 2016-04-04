@@ -1,4 +1,14 @@
-node_modules
-.idea
-.git
+#################
+## JetBrains
+#################
+.idea/
+
+#################
+## Confidential Files
+#################
 cert
+
+#################
+## Node Modules
+#################
+node_modules
