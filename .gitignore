@@ -12,3 +12,9 @@ cert
 ## Node Modules
 #################
 node_modules
+
+#################
+## CSS
+#################
+public/stylesheets/*.css
+public/stylesheets/*.css.map
