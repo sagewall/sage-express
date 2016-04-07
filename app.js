@@ -11,6 +11,7 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var projects = require('./routes/projects');
 var esrimap = require('./routes/esrimap');
+var mapbox = require('./routes/mapbox');
 
 var app = express();
 app.set('env', 'development');
@@ -40,6 +41,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/projects', projects);
 app.use('/esrimap', esrimap);
+app.use('/mapbox', mapbox);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
