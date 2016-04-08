@@ -10,6 +10,7 @@ var autoprefixer = require('express-autoprefixer');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var projects = require('./routes/projects');
+var resume = require('./routes/resume');
 var esrimap = require('./routes/esrimap');
 var mapbox = require('./routes/mapbox');
 
@@ -40,6 +41,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 app.use('/projects', projects);
+app.use('/resume', resume);
 app.use('/esrimap', esrimap);
 app.use('/mapbox', mapbox);
 
