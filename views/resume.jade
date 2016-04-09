@@ -1,7 +1,176 @@
 extends layout
 
 block content
-  h1= title
-  ul
-    li Skill 1
-    li Skill 2
+  header.container-fluid
+    h1 Sage Wall
+    p GIS Developer
+  section.about.container
+    .row
+      .col-xs-12
+        h2 About Me
+        p.
+          I am a GIS analyst and developer with 15 years of experience. I develop custom web mapping applications and
+          tools for Jefferson County Colorado. Previously, for the National Park Service, I created multiple web mapping
+          applications and custom mapping tools. For the Bureau of Ocean Energy Management, I developed tools for
+          visualizing and assessing marine magnetic survey data for archaeological resources. I have provided GIS
+          analysis and mapping contributions to multiple biological assessments, environmental assessments and
+          environmental impact statements. I started my professional career as a GIS Specialist mapping archaeological
+          sites along natural gas pipelines and transmission lines. In graduate school I examined the distribution of
+          archaeological sites in southwestern Wyoming.
+  section.knowledge.container
+    .row
+      .col-xs-12
+        h2 Knowledge and Skills
+        ul.list-group.list-inline
+          li.skill.list-group-item ArcGIS for Desktop
+          li.skill.list-group-item ArcGIS for Server
+          li.skill.list-group-item ArcGIS Online
+          li.skill.list-group-item Web Application Development
+          li.skill.list-group-item Native Application Development
+          li.skill.list-group-item ArcGIS for JavaScript API
+          li.skill.list-group-item Python
+          li.skill.list-group-item JavaScript
+          li.skill.list-group-item HTML
+          li.skill.list-group-item CSS
+          li.skill.list-group-item Sass
+          li.skill.list-group-item C# .NET
+          li.skill.list-group-item Objective-C
+          li.skill.list-group-item Google Maps API
+          li.skill.list-group-item Leaflet API
+          li.skill.list-group-item Mapbox API
+          li.skill.list-group-item ESRI .NET Runtime API
+          li.skill.list-group-item ESRI iOS Runtime API
+          li.skill.list-group-item Geoserver
+          li.skill.list-group-item Docker
+          li.skill.list-group-item GIS Analysis
+          li.skill.list-group-item Cartography
+          li.skill.list-group-item ArcGIS Multiuser Geodatabases
+          li.skill.list-group-item SQL Databases
+          li.skill.list-group-item NoSQL Databases
+          li.skill.list-group-item Git
+          li.skill.list-group-item ITIL
+          li.skill.list-group-item Amazon Web Services
+          li.skill.list-group-item Microsoft Azure
+          li.skill.list-group-item Windows Server Administration
+          li.skill.list-group-item Linux Server Administration
+          li.skill.list-group-item Registered Professional Archaeologist
+  section.experience.container
+    .row
+      .col-xs-12
+        h2 Experience
+        h3 Jefferson County Colorado, Senior GIS Analyst (2/2014 - Present)
+        ul.list-group
+          li.list-group-item Develop and maintain the county’s web mapping applications using the ESRI JavaScript API
+          li.list-group-item Administrator of the county’s ArcGIS Servers
+          li.list-group-item Administrator of the county’s ArcGIS Online account
+          li.list-group-item Create and maintain ArcGIS for Server services
+          li.list-group-item Create layers and maps on ArcGIS Online
+          li.list-group-item Develop ArcGIS add-ins, tools and scripts using Python and C# ArcObjects
+          li.list-group-item Develop native iOS applications using Objective-C and XCode
+          li.list-group-item Produce paper maps and atlases in ArcGIS Desktop
+          li.list-group-item Provide GIS support to the Jefferson County Emergency Operations Center
+          li.list-group-item Member of the IT Security Team
+          li.list-group-item Maintain accounting records in QuickBooks
+        h3.list-group-item-heading Colorado State University, Research Associate (3/2011 – 2/1014)
+        ul.list-group
+          li.list-group-item Participated in a cooperative agreement with the National Park Service (NPS)
+          li.list-group-item Provided GIS and GPS technical support to NPS staff
+          li.list-group-item Developed ArcGIS add-ins and tools using Python and C# .NET ArcObjects
+          li.list-group-item Developed an ArcGIS python toolbox to analyze marine magnetic surveys
+          li.list-group-item Incorporated NPS GIS data into new ArcSDE for SQL Server geodatabases
+          li.list-group-item Created and maintained ArcGIS for Server services
+          li.list-group-item Created maps and atlases
+          li.list-group-item Created visual simulations using ArcScene and Google Earth
+          li.list-group-item Developed internet based map applications using Geocortex, Silverlight and JavaScript
+          li.list-group-item Wrote training materials for ArcPad, Pathfinder Office and TerraSync GPS software
+          li.list-group-item Trained NPS staff in ESRI ArcGIS products and GPS data collection
+          li.list-group-item Member of the GPS and Mobile Mapping Subcommittee to the NPS GIS Council
+          li.list-group-item Member of the Cultural Resources Subcommittee to the NPS GIS Council
+          li.list-group-item Mentored and trained interns
+        h3 SWCA Environmental Consultants, GIS Analyst (10/2008 – 3/2011)
+        ul.list-group
+          li.list-group-item Provided GIS support to biological, paleontological and cultural resource scientists
+          li.list-group-item Analyzed project impacts to biological, paleontological and cultural resources
+          li.list-group-item Incorporated differentially corrected GPS data into existing GIS datasets
+          li.list-group-item Developed ArcGIS scripts and tools using Python
+          li.list-group-item Developed custom open source internet based map products using PHP and KML
+          li.list-group-item Projects ranged in size from 5-acre surveys blocks to multi-state utility corridors
+          li.list-group-item Mentored and trained junior members of the team
+        h3 Alpine Archaeological Consultants, GIS Specialist (7/2004 to 5/2008)
+        ul.list-group
+          li.list-group-item Staff archaeologist and GIS specialist
+          li.list-group-item Trained staff in ESRI ArcGIS products and Trimble sub-meter GPS survey
+          li.list-group-item Produced report figures and performed geospatial analysis for archaeological reports
+        h3 University of Wyoming, Graduate Student (8/2000 to 7/2004)
+        ul.list-group
+          li.list-group-item Used ArcGIS to study the spatial distribution of cultural resources.
+          li.list-group-item.
+            Used ArcGIS spatial analysis tools and GPS to research Native American landscape use in southwest Wyoming as
+            part of a National Science Foundation grant.
+          li.list-group-item Digitized archaeological project and site locations in Yellowstone National Park.
+  section.education.container
+    .row
+      .col-xs-12
+        h2 Education
+        ul.list-group
+          li.list-group-item.
+            <strong>2006</strong> - Master of Arts in Anthropology from the University of Wyoming
+          li.list-group-item.
+            <strong>1999</strong> - Bachelor of Science in Anthropology from the University of Utah
+          li.list-group-item.
+            <strong>1997</strong> - Associate of Science in General Studies from Weber State University
+  section.publications.container
+    .row
+      .col-xs-12
+        h2 Publications
+        ul.list-group
+          li.list-group-item.
+            Multiple Approaches to Formation Processes: The Pine Spring Site, Southwest Wyoming. <em>Geoarchaeology,
+            an International Journal</em>. Vol. 21, No. 6, 615-638. (2006)
+  section.thesis.container
+    .row
+      .col-xs-12
+        h2 Thesis
+        ul.list-group
+          li.list-group-item.
+            Prehistoric Archaeology, Water and Sand: A GIS Analysis of the Moxa Arch Study Area of
+            Southwestern Wyoming. <em>Unpublished M.A. thesis, Department of Anthropology, University of
+            Wyoming, Laramie</em>. (2006)
+  section.reports.container
+    .row
+      .col-xs-12
+        h2 Reports
+        ul.list-group
+          li.list-group-item.
+            Marine Magnetic Survey Modeling: Custom Geospatial Processing Tools for Visualizing and Assessing Marine
+            Magnetic Surveys for Archaeological Resources. <em>US Department of the Interior, Bureau of Ocean Energy
+            Management, Office of Renewable Energy Programs, Herndon, VA</em> (2014)
+          li.list-group-item.
+            USACE Missouri River Surveys, North Dakota and South Dakota. <em>SWCA Environmental Consultants, Inc.
+            Phoenix, Arizona</em> (2011)
+          li.list-group-item.
+            Class I Cultural Resource Overview of the Colorado Portion of the Planned Overland Pass Gas Pipeline,
+            Weld, Morgan, Logan, Washington, and Yuma Counties, Colorado. <em>Alpine Archaeological Consultants, Inc.
+            Montrose, Colorado</em> (2006)
+          li.list-group-item.
+            Class II Cultural Resource Inventory of Fifty 20-Acre Parcels, Comprising a Test of the Uncompahgre
+            Plateau Archaeological Project's Site Sensitivity Models, Montrose, Delta, Mesa, and San Miguel Counties,
+            Colorado. <em>Alpine Archaeological Consultants, Inc.  Montrose, Colorado</em> (2005)
+          li.list-group-item.
+            Summer 2003 Fieldwork: Moxa Arch Pilot Project. <em>Technical Report No. 31.  George C. Frison Institute
+            of Archaeology and Anthropology, University of Wyoming, Laramie</em> (2004)
+          li.list-group-item.
+            2002 Investigations in Paint Rock Canyon and Southsider Shelter. <em>George C. Frison Institute of
+            Archaeology and Anthropology, University of Wyoming, Laramie</em> (2003)
+          li.list-group-item.
+            2001 Preliminary Investigation in the Paint Rock Canyon Archaeological Landscape District. <em>George C.
+            Frison Institute of Archaeology and Anthropology, University of Wyoming, Laramie</em> (2002)
+  section.orgainizations.container
+    .row
+      .col-xs-12
+        h2 Professional Organizations
+        ul.list-group
+          li.list-group-item GIS Colorado
+          li.list-group-item Register of Professional Archaeologists
+          li.list-group-item Society for American Archaeology
+  footer.container-fluid
