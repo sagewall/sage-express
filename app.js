@@ -41,12 +41,24 @@ app.use(sass({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Express Routes
 app.use('/', routes);
 app.use('/users', users);
 app.use('/projects', projects);
 app.use('/resume', resume);
 app.use('/esrimap', esrimap);
 app.use('/mapbox', mapbox);
+
+// API Endpoints
+app.get('/api/skills', function(req, res){
+  var skills = mongoUtil.skills();
+  skills.find().toArray(function(err, docs){
+    if(err){
+      res.sendStatus(400);
+    }
+    res.json(docs);
+  });
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
