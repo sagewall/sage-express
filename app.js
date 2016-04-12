@@ -14,6 +14,9 @@ var resume = require('./routes/resume');
 var esrimap = require('./routes/esrimap');
 var mapbox = require('./routes/mapbox');
 
+var mongoUtil = require('./mongoUtil');
+mongoUtil.connect();
+
 var app = express();
 app.set('env', 'development');
 
