@@ -5,10 +5,15 @@ block stylesheets
   link(rel='stylesheet', href='/stylesheets/esrimap.css')
 
 block content
-  h1 ESRI Map
+  h1 Hazard and Disaster Response Map
   .container
     .row
-      .col-xs-12
+      .col-xs-3.well
+        h3 Search
+        #searchDiv
+        h3 Layers
+        #layersDiv
+      .col-xs-9
         #mapDiv
 
 block javascripts
