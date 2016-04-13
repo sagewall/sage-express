@@ -3,7 +3,7 @@ require([
   'esri/arcgis/utils',
   'dojo/domReady!'
 ], function(Map, arcgisUtils){
-  arcgisUtils.createMap('a3ecc21f773a4e1aab73ae5aa5f015ae', 'mapDiv').then(function (response) {
+  arcgisUtils.createMap('16384bba263b4c6eb25e9a30e1cc68c1', 'mapDiv').then(function (response) {
     var map = response.map;
   });
 });
