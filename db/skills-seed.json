@@ -1,0 +1,126 @@
+[
+  {
+    "name": "ArcGIS for Desktop",
+    "skill": 9
+  },
+  {
+    "name": "ArcGIS for Server",
+    "skill": 9
+  },
+  {
+    "name": "Web Application Development",
+    "skill": 9
+  },
+  {
+    "name": "Native Application Development",
+    "skill": 7
+  },
+  {
+    "name": "ArcGIS for JavaScript API",
+    "skill": 9
+  },
+  {
+    "name": "Python",
+    "skill": 9
+  },
+  {
+    "name": "JavaScript",
+    "skill": 9
+  },
+  {
+    "name": "HTML",
+    "skill": 9
+  },
+  {
+    "name": "CSS",
+    "skill": 7
+  },
+  {
+    "name": "Sass",
+    "skill": 7
+  },
+  {
+    "name": "C# .NET",
+    "skill": 6
+  },
+  {
+    "name": "Objective-C",
+    "skill": 6
+  },
+  {
+    "name": "Google Maps API",
+    "skill": 8
+  },
+  {
+    "name": "Leaflet API",
+    "skill": 8
+  },
+  {
+    "name": "Mapbox API",
+    "skill": 8
+  },
+  {
+    "name": "ESRI .NET Runtime API",
+    "skill": 6
+  },
+  {
+    "name": "ESRI iOS Runtime API",
+    "skill": 6
+  },
+  {
+    "name": "Geoserver",
+    "skill": 6
+  },
+  {
+    "name": "Docker",
+    "skill": 7
+  },
+  {
+    "name": "GIS Analysis",
+    "skill": 9
+  },
+  {
+    "name": "Cartography",
+    "skill": 8
+  },
+  {
+    "name": "ArcGIS Multiuser Geodatabases",
+    "skill": 7
+  },
+  {
+    "name": "SQL Databases",
+    "skill": 7
+  },
+  {
+    "name": "NoSQL Databases",
+    "skill": 4
+  },
+  {
+    "name": "Git",
+    "skill": 7
+  },
+  {
+    "name": "ITIL",
+    "skill": 4
+  },
+  {
+    "name": "Amazon Web Services",
+    "skill": 6
+  },
+  {
+    "name": "Microsoft Azure",
+    "skill": 6
+  },
+  {
+    "name": "Windows Server Administration",
+    "skill": 6
+  },
+  {
+    "name": "Linux Server Administration",
+    "skill": 6
+  },
+  {
+    "name": "Registered Professional Archaeologist",
+    "skill": 7
+  }
+]
