@@ -14,8 +14,8 @@ var resume = require('./routes/resume');
 var esrimap = require('./routes/esrimap');
 var mapbox = require('./routes/mapbox');
 
-var mongoUtil = require('./mongoUtil');
-mongoUtil.connect();
+var mongo = require('./db/mongo');
+mongo.connect();
 
 var app = express();
 app.set('env', 'development');
@@ -51,7 +51,7 @@ app.use('/mapbox', mapbox);
 
 // API Endpoints
 app.get('/api/skills', function(req, res){
-  var skills = mongoUtil.skills();
+  var skills = mongo.skills();
   skills.find().toArray(function(err, docs){
     if(err){
       res.sendStatus(400);
