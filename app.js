@@ -12,7 +12,7 @@ var users = require('./routes/users');
 var projects = require('./routes/projects');
 var resume = require('./routes/resume');
 var snowfall = require('./routes/snowfall');
-var mapbox = require('./routes/mapbox');
+var pirates = require('./routes/pirates');
 
 var mongo = require('./db/mongo');
 mongo.connect();
@@ -47,7 +47,7 @@ app.use('/users', users);
 app.use('/projects', projects);
 app.use('/resume', resume);
 app.use('/snowfall', snowfall);
-app.use('/mapbox', mapbox);
+app.use('/pirates', pirates);
 
 // API Endpoints
 app.get('/api/skills', function(req, res){
