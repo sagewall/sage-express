@@ -11,7 +11,7 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var projects = require('./routes/projects');
 var resume = require('./routes/resume');
-var esrimap = require('./routes/esrimap');
+var snowfall = require('./routes/snowfall');
 var mapbox = require('./routes/mapbox');
 
 var mongo = require('./db/mongo');
@@ -46,7 +46,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/projects', projects);
 app.use('/resume', resume);
-app.use('/esrimap', esrimap);
+app.use('/snowfall', snowfall);
 app.use('/mapbox', mapbox);
 
 // API Endpoints

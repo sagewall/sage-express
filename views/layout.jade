@@ -22,10 +22,23 @@ html
               a(href='/resume') Resume
             li
               a(href='/projects') Projects
-            li
-              a(href='/esrimap') ESRI Map
-            li
-              a(href='/mapbox') Mapbox Map
+            li(class='dropdown')
+              a(href='#', class='dropdown-toggle', data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') ESRI Maps
+                span(class='caret')
+              ul(class='dropdown-menu')
+                li
+                  a(href='/snowfall') Snowfall Map
+                li
+                  a(href='/snowfall') Emergency Map
+            li(class='dropdown')
+              a(href='#', class='dropdown-toggle', data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Mapbox Maps
+                span(class='caret')
+              ul(class='dropdown-menu')
+                li
+                  a(href='/mapbox') Mapbox 1
+                li
+                  a(href='/mapbox') Mapbox 2
+
           ul.nav.navbar-nav.navbar-right
             li
               a(href='/users')
