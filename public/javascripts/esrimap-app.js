@@ -18,7 +18,7 @@ require([
       map: map
     };
 
-    var search = new Search(searchOptions, "searchDiv");
+    var search = new Search(searchOptions, 'searchDiv');
     search.startup();
 
     var layerList = new LayerList({
@@ -26,7 +26,7 @@ require([
       showLegend: true,
       showSubLayers: true,
       layers: []
-    },"layersDiv");
+    },'layersDiv');
     layerList.startup();
 
 
