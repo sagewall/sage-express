@@ -1,18 +1,24 @@
 extends layout
 
 block stylesheets
+  link(rel='stylesheet', href='https://js.arcgis.com/3.16/dijit/themes/claro/claro.css')
   link(rel='stylesheet', href='https://js.arcgis.com/3.16/esri/css/esri.css')
   link(rel='stylesheet', href='/stylesheets/esrimap.css')
 
 block content
-  h1 Hazard and Disaster Response Map
+  h1 Snowfall
   .container
     .row
-      .col-xs-3.well
+      .col-xs-3.side-bar
         h3 Search
         #searchDiv
         h3 Layers
         #layersDiv
+        h3 Time Slider
+        .current-time.small.text-center
+        #timeSliderDiv
+        .start-time.small.text-left
+        .end-time.small.text-right.pull-right
       .col-xs-9
         #mapDiv
 
