@@ -11,6 +11,7 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var projects = require('./routes/projects');
 var resume = require('./routes/resume');
+var hazards = require('./routes/hazards');
 var snowfall = require('./routes/snowfall');
 var pirates = require('./routes/pirates');
 
@@ -46,6 +47,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/projects', projects);
 app.use('/resume', resume);
+app.use('/hazards', hazards);
 app.use('/snowfall', snowfall);
 app.use('/pirates', pirates);
 

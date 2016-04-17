@@ -1,0 +1,22 @@
+extends layout
+
+block stylesheets
+  link(rel='stylesheet', href='https://js.arcgis.com/3.16/dijit/themes/claro/claro.css')
+  link(rel='stylesheet', href='https://js.arcgis.com/3.16/esri/css/esri.css')
+  link(rel='stylesheet', href='/stylesheets/hazards.css')
+
+block content
+  h1 Hazards
+  .container
+    .row
+      .col-xs-3.side-bar
+        h3 Search
+        #searchDiv
+        h3 Layers
+        #layersDiv
+      .col-xs-9
+        #mapDiv
+
+block javascripts
+  script(src='https://js.arcgis.com/3.16/')
+  script(src='/javascripts/hazards.js')
