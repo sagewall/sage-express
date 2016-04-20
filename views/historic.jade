@@ -1,8 +1,8 @@
 extends layout
 
 block stylesheets
-  link(rel='stylesheet', href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css')
-  link(rel='stylesheet', href='/stylesheets/pirates.css')
+  link(rel='stylesheet', href='//api.tiles.mapbox.com/mapbox-gl-js/v0.17.0/mapbox-gl.css')
+  link(rel='stylesheet', href='/stylesheets/historic.css')
 
 block content
   h1 Historic Places
@@ -12,5 +12,5 @@ block content
         #mapDiv
 
 block javascripts
-  script(src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js')
-  script(src='/javascripts/pirates.js')
+  script(src='//api.tiles.mapbox.com/mapbox-gl-js/v0.17.0/mapbox-gl.js')
+  script(src='/javascripts/historic.js')
