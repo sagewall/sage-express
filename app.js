@@ -14,6 +14,7 @@ var resume = require('./routes/resume');
 var hazards = require('./routes/hazards');
 var historicplaces = require('./routes/historicplaces');
 var snowfall = require('./routes/snowfall');
+var historic = require('./routes/historic');
 var pirates = require('./routes/pirates');
 
 var mongo = require('./db/mongo');
@@ -51,6 +52,7 @@ app.use('/resume', resume);
 app.use('/hazards', hazards);
 app.use('/historicplaces', historicplaces);
 app.use('/snowfall', snowfall);
+app.use('/historic', historic);
 app.use('/pirates', pirates);
 
 // API Endpoints

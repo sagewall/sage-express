@@ -1,0 +1,16 @@
+extends layout
+
+block stylesheets
+  link(rel='stylesheet', href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css')
+  link(rel='stylesheet', href='/stylesheets/pirates.css')
+
+block content
+  h1 Historic Places
+  .container
+    .row
+      .col-xs-12
+        #mapDiv
+
+block javascripts
+  script(src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js')
+  script(src='/javascripts/pirates.js')
