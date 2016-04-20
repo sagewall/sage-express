@@ -1,7 +1,4 @@
 #Sage Express
 ####Requires MongoDB
 * To seed database run the following command
-  * Windows
-    * `"C:\Program Files\MongoDB\Server\3.2\bin\mongoimport.exe" --db sage-express --collection skills --type json --file db/skills-seed.json --jsonArray --drop`
-  * Linux
-    * `mongoimport --db sage-express --collection skills --type json --file db/skills-seed.json --jsonArray --drop`
+  * `mongoimport --host ds013901.mlab.com --port 13901 --db sage-express --username <username> --password <password> --collection skills --type json --file db/skills-seed.json --jsonArray --drop`

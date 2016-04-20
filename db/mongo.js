@@ -1,11 +1,12 @@
 var mongo = require('mongodb');
+var credentials = require('./credentials');
 
 var client = mongo.MongoClient;
 var _db;
 
 module.exports = {
   connect: function(){
-    client.connect('mongodb://localhost:27017/sage-express', function(err, db){
+    client.connect('mongodb://' + credentials.user + ':' + credentials.password + '@ds013901.mlab.com:13901/sage-express', function(err, db){
       if(err){
         console.log('Error connecting to MongoDB - check mongod connection');
         process.exit(1);

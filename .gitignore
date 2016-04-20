@@ -6,12 +6,13 @@
 #################
 ## Confidential Files
 #################
-cert
+cert/
+db/credentials.js
 
 #################
 ## Node Modules
 #################
-node_modules
+node_modules/
 
 #################
 ## CSS
