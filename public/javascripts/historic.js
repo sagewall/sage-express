@@ -14,8 +14,5 @@ map.on('click', function(e){
     return;
   }
   var feature = features[0];
-  var popup = new mapboxgl.Popup()
-    .setLngLat(feature.geometry.coordinates)
-    .setHTML(feature.properties.PopupInfo)
-    .addTo(map);
+  $('#infoDiv').html(feature.properties.PopupInfo);
 });

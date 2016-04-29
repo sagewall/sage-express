@@ -1,8 +1,15 @@
+@mixin centerer
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
 #mapDiv
   height: 50em
   width: 100%
 
-.mapboxgl-popup
-  max-width: 30em
-  max-height: 30em
-  overflow-y: scroll
+#infoDiv
+  text-align: center
+  img
+    float: right
+    max-width: 100%
