@@ -16,8 +16,7 @@ map.on('draw:created', function(e) {
 });
 
 
-$.getJSON('api/historic-places', function(data){
-  console.log(data);
+$.getJSON('api/historic', function(data){
   $.each(data, function(index, value){
     L.geoJson(value)
       .bindPopup(value.properties.name)

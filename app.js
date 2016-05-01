@@ -62,7 +62,7 @@ app.get('/api/skills', function(req, res){
   });
 });
 
-app.get('/api/historic-places', function(req, res){
+app.get('/api/historic', function(req, res){
   var historicPlaces = mongo.historicPlaces();
   historicPlaces.find().toArray(function(err, docs){
     if(err){
