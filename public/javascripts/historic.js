@@ -1,5 +1,7 @@
 L.mapbox.accessToken = 'pk.eyJ1Ijoic2FnZXdhbGwiLCJhIjoiMjRhNDExZWMwY2M1NzFlOTYxZWJjNjRiZTBhZGQ2NDEifQ.85AyZco3_blL_yZ0dv3Bog';
 
+$('.panel').hide();
+
 var map = L.mapbox.map('mapDiv', 'mapbox.streets')
   .setView([39.7555, -105.2211], 11);
 
@@ -26,5 +28,7 @@ $.getJSON('api/historic', function(data){
 });
 
 function showDescription(e){
+  $('.panel').show();
+  $('#name').html(e.layer.feature.properties.name);
   $('#description').html(e.layer.feature.properties.description);
 }

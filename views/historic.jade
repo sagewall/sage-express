@@ -9,10 +9,14 @@ block content
   h1 Historic Places
   .container
     .row
-      .col-xs-8
+      .col-sm-8
         #mapDiv
-      .col-xs-3
-        #description
+      .col-sm-3
+        .panel.panel-primary
+          .panel-heading
+            #name
+          .panel-body
+            #description
 
 block javascripts
   script(src='//api.mapbox.com/mapbox.js/v2.4.0/mapbox.js')
