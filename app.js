@@ -12,10 +12,8 @@ var users = require('./routes/users');
 var projects = require('./routes/projects');
 var resume = require('./routes/resume');
 var hazards = require('./routes/hazards');
-var historicplaces = require('./routes/historicplaces');
 var snowfall = require('./routes/snowfall');
 var historic = require('./routes/historic');
-var pirates = require('./routes/pirates');
 
 var mongo = require('./db/mongo');
 mongo.connect();
@@ -50,10 +48,8 @@ app.use('/users', users);
 app.use('/projects', projects);
 app.use('/resume', resume);
 app.use('/hazards', hazards);
-app.use('/historicplaces', historicplaces);
 app.use('/snowfall', snowfall);
 app.use('/historic', historic);
-app.use('/pirates', pirates);
 
 // API Endpoints
 app.get('/api/skills', function(req, res){
