@@ -14,3 +14,12 @@ new L.Control.Draw({
 map.on('draw:created', function(e) {
   featureGroup.addLayer(e.layer);
 });
+
+
+$.getJSON('api/historic-places', function(data){
+  console.log(data);
+  $.each(data, function(index, value){
+    L.geoJson(value).addTo(map).bindPopup(value['properties']['description']);
+  });
+
+});

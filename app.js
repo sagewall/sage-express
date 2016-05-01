@@ -66,6 +66,16 @@ app.get('/api/skills', function(req, res){
   });
 });
 
+app.get('/api/historic-places', function(req, res){
+  var historicPlaces = mongo.historicPlaces();
+  historicPlaces.find().toArray(function(err, docs){
+    if(err){
+      res.sendStatus(400);
+    }
+    res.json(docs);
+  });
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

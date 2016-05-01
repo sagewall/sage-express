@@ -1,18 +1,18 @@
 extends layout
 
 block stylesheets
-  link(rel='stylesheet', href='//api.tiles.mapbox.com/mapbox-gl-js/v0.17.0/mapbox-gl.css')
-  link(rel='stylesheet', href='/stylesheets/historic.css')
+  link(rel='stylesheet', href='//api.mapbox.com/mapbox.js/v2.4.0/mapbox.css')
+  link(rel='stylesheet', href='//api.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.3/leaflet.draw.css')
+  link(rel='stylesheet', href='/stylesheets/pirates.css')
 
 block content
   h1 Historic Places
   .container
     .row
-      .col-xs-3
-        #infoDiv
-      .col-xs-8
+      .col-xs-12
         #mapDiv
 
 block javascripts
-  script(src='//api.tiles.mapbox.com/mapbox-gl-js/v0.17.0/mapbox-gl.js')
-  script(src='/javascripts/historic.js')
+  script(src='//api.mapbox.com/mapbox.js/v2.4.0/mapbox.js')
+  script(src='https://api.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.3/leaflet.draw.js')
+  script(src='/javascripts/pirates.js')

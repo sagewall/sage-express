@@ -17,5 +17,8 @@ module.exports = {
   },
   skills: function(){
     return _db.collection('skills');
+  },
+  historicPlaces: function(){
+    return _db.collection('historic.places')
   }
 };

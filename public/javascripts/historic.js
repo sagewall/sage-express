@@ -1,18 +1,25 @@
-mapboxgl.accessToken = 'pk.eyJ1Ijoic2FnZXdhbGwiLCJhIjoiMjRhNDExZWMwY2M1NzFlOTYxZWJjNjRiZTBhZGQ2NDEifQ.85AyZco3_blL_yZ0dv3Bog';
+L.mapbox.accessToken = 'pk.eyJ1Ijoic2FnZXdhbGwiLCJhIjoiMjRhNDExZWMwY2M1NzFlOTYxZWJjNjRiZTBhZGQ2NDEifQ.85AyZco3_blL_yZ0dv3Bog';
 
-var map = new mapboxgl.Map({
-  container: 'mapDiv',
-  style: 'mapbox://styles/sagewall/cin8vj3is0000b4nos3pormeg',
-  center: [-105.2211, 39.7555],
-  zoom: 11
+var map = L.mapbox.map('mapDiv', 'mapbox.pirates')
+  .setView([39.7555, -105.2211], 11);
+
+var featureGroup = L.featureGroup().addTo(map);
+
+new L.Control.Draw({
+  edit: {
+    featureGroup: featureGroup
+  }
+}).addTo(map);
+
+map.on('draw:created', function(e) {
+  featureGroup.addLayer(e.layer);
 });
 
-map.on('click', function(e){
-  console.log('click');
-  var features = map.queryRenderedFeatures(e.point);
-  if(!features.length){
-    return;
-  }
-  var feature = features[0];
-  $('#infoDiv').html(feature.properties.PopupInfo);
+
+$.getJSON('api/historic-places', function(data){
+  console.log(data);
+  $.each(data, function(index, value){
+    L.geoJson(value).addTo(map).bindPopup(value['properties']['description']);
+  });
+
 });
