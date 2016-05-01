@@ -17,7 +17,7 @@ mongoimport --host ds013901.mlab.com --port 13901 --db sage-express --username <
 ```
 * To seed the historic places collection run the following command
 ```
-mongoimport --host ds013901.mlab.com --port 13901 --db sage-express --username <username> --password <password> --collection historic.places --type json --file db/historic-places.json --jsonArray --drop
+mongoimport --host ds013901.mlab.com --port 13901 --db sage-express --username <username> --password <password> --collection historic.places --type json --file db/historic.json --jsonArray --drop
 ```
 * To build docker image run the following command
 
