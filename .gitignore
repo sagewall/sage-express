@@ -13,6 +13,7 @@ db/credentials.js
 ## Node Modules
 #################
 node_modules/
+/db/config.js
 
 #################
 ## CSS

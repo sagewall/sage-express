@@ -6,7 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var sass = require('node-sass-middleware');
 var autoprefixer = require('express-autoprefixer');
-
+var mongo_express = require('mongo-express/lib/middleware');
+var mongo_express_config = require('./db/config.js');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var projects = require('./routes/projects');
@@ -50,6 +51,7 @@ app.use('/resume', resume);
 app.use('/hazards', hazards);
 app.use('/snowfall', snowfall);
 app.use('/historic', historic);
+app.use('/mongo', mongo_express(mongo_express_config));
 
 // API Endpoints
 app.get('/api/skills', function(req, res){
