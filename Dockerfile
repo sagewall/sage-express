@@ -8,5 +8,5 @@ RUN sudo apt-get install -y build-essential
 COPY . /sage-express
 RUN cd /sage-express; npm install --production
 
-EXPOSE 443
+EXPOSE 3000
 CMD ["node", "/sage-express/bin/www"]
