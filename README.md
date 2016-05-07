@@ -26,3 +26,7 @@ mongoimport --host ds013901.mlab.com --port 13901 --db sage-express --username <
 * To run the docker image run the following command
 
 `docker run -p 3000:3000 -d sagewall/sage-express`
+
+* To forward port 443 to 3000 in iptables run the following command
+
+`sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-ports 3000`
