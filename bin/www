@@ -22,7 +22,11 @@ app.set('port', port);
  */
 var options = {
   key: fs.readFileSync(path.join(__dirname, '../cert', 'server.key')),
-  cert: fs.readFileSync(path.join(__dirname, '../cert', 'server.crt'))
+  cert: fs.readFileSync(path.join(__dirname, '../cert', 'server.crt')),
+  ca: [
+    fs.readFileSync(path.join(__dirname, '../cert', 'COMODORSAAddTrustCA.crt')),
+    fs.readFileSync(path.join(__dirname, '../cert', 'COMODORSADomainValidationSecureServerCA.crt'))
+  ]
 };
 var server = https.createServer(options, app);
 
