@@ -1,7 +1,5 @@
 #Sage Express
-* This application uses https and requires a certificate and key be placed in a /cert folder
-`/cert/server.crt`
-`/cert/server.key`
+* This application uses https and requires a certificates and keys be placed in a /cert folder and configured in the bin/www file.
 
 * MongoDB credentials should be stored in credentials.js in the /db folder
 ```javacript
@@ -29,8 +27,13 @@ mongoimport --host ds013901.mlab.com --port 13901 --db sage-express --username <
 
 * To run the docker image run the following command
 
-`docker run -p 3000:3000 -d sagewall/sage-express`
+`docker run -p 3000:3000 --restart=always -d sagewall/sage-express`
 
-* To forward port 443 to 3000 in iptables run the following command
-
+* To forward port 443 to 3000 in iptables by adding a custom-ip-tables.conf to `/ect/init`
+```
+start on startup
+task
+exec iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-ports 3000
+```
+* Superuser command to forward port 443 to 3000 in iptables
 `sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-ports 3000`
