@@ -9,7 +9,6 @@ var autoprefixer = require('express-autoprefixer');
 var mongo_express = require('mongo-express/lib/middleware');
 var mongo_express_config = require('./db/config.js');
 var routes = require('./routes/index');
-var users = require('./routes/users');
 var projects = require('./routes/projects');
 var resume = require('./routes/resume');
 var hazards = require('./routes/hazards');
@@ -45,7 +44,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Express Routes
 app.use('/', routes);
-app.use('/users', users);
 app.use('/projects', projects);
 app.use('/resume', resume);
 app.use('/hazards', hazards);
