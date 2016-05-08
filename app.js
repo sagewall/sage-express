@@ -54,16 +54,6 @@ app.use('/historic', historic);
 app.use('/mongo', mongo_express(mongo_express_config));
 
 // API Endpoints
-app.get('/api/skills', function(req, res){
-  var skills = mongo.skills();
-  skills.find().toArray(function(err, docs){
-    if(err){
-      res.sendStatus(400);
-    }
-    res.json(docs);
-  });
-});
-
 app.get('/api/historic', function(req, res){
   var historicPlaces = mongo.historicPlaces();
   historicPlaces.find().toArray(function(err, docs){
