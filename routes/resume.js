@@ -3,7 +3,6 @@ var router = express.Router();
 var mongo = require('../db/mongo');
 mongo.connect();
 
-/* GET home page. */
 router.get('/', function(req, res) {
   var skills = mongo.skills();
   skills.find().toArray(function(err, docs){
