@@ -3,11 +3,26 @@ extends layout
 block content
   .container
     h1 Sage Wall
+    .well
+      p.
+        Welcome to my website and web mapping sandbox.  This site is constantly under construction as I experiment
+        with new things.
     .jumbotron
-      .well
-        p.
-          Welcome to my website and web mapping sandbox.  This site is constantly under construction as I experiment
-          with new things.
       a.btn.btn-default(href='/hazards', role='button') Hazards Map
       a.btn.btn-default(href='/snowfall', role='button') Snowfall Map
       a.btn.btn-default(href='/historic', role='button') Historic Places Map
+    #photoCarousel.carousel.slide(data-ride='carousel')
+      ol.carousel-indicators
+        li.active(data-target='photoCarousel' data-slide-to='0')
+        li(data-target='photoCarousel' data-slide-to='1')
+      .carousel-inner(role='listbox')
+        .item.active
+          img(src='images/visionquest.jpg')
+        .item
+          img(src='images/visionquest.jpg')
+      a.left.carousel-control(href='#photoCarousel', role='button', data-slide='prev')
+        span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+        span.sr-only Previous
+      a.right.carousel-control(href='#photoCarousel', role='button', data-slide='prev')
+        span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+        span.sr-only Next
