@@ -5,7 +5,7 @@ mongo.connect();
 
 router.get('/', function(req, res) {
   var skills = mongo.skills();
-  skills.find().toArray(function(err, docs){
+  skills.find().sort({skill: -1}).toArray(function(err, docs){
     res.render('resume', {
       title: 'Resume',
       skills: docs
