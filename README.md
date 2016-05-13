@@ -1,5 +1,5 @@
 #Sage Express
-* Deployment
+## Deployment
 1. Install git `sudo apt-get install git`
 2. [Install NodeJS](https://nodejs.org/en/download/package-manager/)
 3. Install forever globally `sudo npm -g install forever`
