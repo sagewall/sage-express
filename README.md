@@ -17,21 +17,6 @@ mongoimport --host ds013901.mlab.com --port 13901 --db sage-express --username <
 ```
 mongoimport --host ds013901.mlab.com --port 13901 --db sage-express --username <username> --password <password> --collection historic.places --type json --file db/historic.json --jsonArray --drop
 ```
-* To build docker image run the following command
-
-`docker build -t sagewall/sage-express .`
-
-* To push the docker image to docker hub run the following command
-
-`docker push sagewall/sage-express`
-
-* To pull the docker image to docker hub run the following command
-
-`docker pull sagewall/sage-express`
-
-* To run the docker image run the following command
-
-`docker run -p 3000:3000 --restart=always -d sagewall/sage-express`
 
 * To forward port 443 to 3000 in iptables by adding a custom-ip-tables.conf to `/ect/init`
 ```
