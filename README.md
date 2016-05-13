@@ -25,6 +25,10 @@ mongoimport --host ds013901.mlab.com --port 13901 --db sage-express --username <
 
 `docker push sagewall/sage-express`
 
+* To pull the docker image to docker hub run the following command
+
+`docker pull sagewall/sage-express`
+
 * To run the docker image run the following command
 
 `docker run -p 3000:3000 --restart=always -d sagewall/sage-express`
