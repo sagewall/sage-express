@@ -11,11 +11,23 @@ block content
       ol.carousel-indicators
         li.active(data-target='photoCarousel' data-slide-to='0')
         li(data-target='photoCarousel' data-slide-to='1')
+        li(data-target='photoCarousel' data-slide-to='2')
       .carousel-inner(role='listbox')
         .item.active
-          img(src='images/visionquest.jpg')
+          img.img-responsive.center-block(src='images/visionquest.jpg')
+          .carousel-caption
+            h3 Bighorn Mountains
+            p North central Wyoming
         .item
-          img(src='images/visionquest.jpg')
+          img.img-responsive.center-block(src='images/mesa_arch.jpg')
+          .carousel-caption
+            h3 Mesa Arch
+            p Canyonlands National Park, Utah
+        .item
+          img.img-responsive.center-block(src='images/sage_1975.jpg')
+          .carousel-caption
+            h3 Skiing in 1975
+            p Snowbasin, Utah
       a.left.carousel-control(href='#photoCarousel', role='button', data-slide='prev')
         span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
         span.sr-only Previous
