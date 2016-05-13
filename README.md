@@ -16,13 +16,13 @@
      module.exports = credentials;
 ```
 9. To seed skills collection run the following command with the correct username and password
-    ```
-    mongoimport --host <hostname> --port <port> --db <database> --username <username> --password <password> --collection skills --type json --file db/skills.json --jsonArray --drop
-    ```
+```
+mongoimport --host <hostname> --port <port> --db <database> --username <username> --password <password> --collection skills --type json --file db/skills.json --jsonArray --drop
+```
 10. To seed the historic places collection run the following command with the correct username and password
-    ```
-    mongoimport --host <hostname> --port <port> --db <database> --username <username> --password <password> --collection historic.places --type json --file db/historic.json --jsonArray --drop
-    ```
+```
+mongoimport --host <hostname> --port <port> --db <database> --username <username> --password <password> --collection historic.places --type json --file db/historic.json --jsonArray --drop
+```
 11. Forward port 443 to 3000 in iptables by creating a new file `/ect/init/custom-ip-tables.conf`
 ```
 start on startup
