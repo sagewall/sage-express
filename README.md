@@ -26,7 +26,6 @@ mongoimport --host <hostname> --port <port> --db <database> --username <username
 - Forward port 443 to 3000 in iptables by creating a new file `/ect/init/custom-ip-tables.conf`
 ```
 start on startup
-task
 exec iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-ports 3000
 ```
 - Make sage-express run forever by creating a new file `/etc/init/sage-express.conf`
