@@ -23,7 +23,7 @@ mongoimport --host <hostname> --port <port> --db <database> --username <username
 ```
 mongoimport --host <hostname> --port <port> --db <database> --username <username> --password <password> --collection historic.places --type json --file db/historic.json --jsonArray --drop
 ```
-- Forward port 443 to 3000 in iptables by creating a new file `/ect/init/custom-ip-tables.conf`
+- Forward port 443 to 3000 in iptables by creating a new file `/etc/init/custom-ip-tables.conf`
 ```
 start on startup
 exec iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-ports 3000
