@@ -16,6 +16,7 @@ var snowfall = require('./routes/snowfall');
 var historic = require('./routes/historic');
 var api = require('./routes/api');
 var weather = require('./routes/weather');
+var darkskies = require('./routes/darkskies');
 
 var app = express();
 app.set('env', 'development');
@@ -50,6 +51,7 @@ app.use('/snowfall', snowfall);
 app.use('/historic', historic);
 app.use('/api', api);
 app.use('/weather', weather);
+app.use('/darkskies', darkskies);
 app.use('/mongo', mongo_express(mongo_express_config));
 
 // catch 404 and forward to error handler
