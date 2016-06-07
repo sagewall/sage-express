@@ -3,3 +3,7 @@ var map = new mapboxgl.Map({
   container: 'mapDiv',
   style: 'mapbox://styles/sagewall/cip04ztds0002biksiuzb0ujm'
 });
+
+map.addControl(new mapboxgl.Geolocate({
+  position: 'bottom-left'
+}));
