@@ -7,3 +7,7 @@ var map = new mapboxgl.Map({
 map.addControl(new mapboxgl.Geolocate({
   position: 'bottom-left'
 }));
+
+map.addControl(new mapboxgl.Geocoder({
+  position: 'top-left'
+}));

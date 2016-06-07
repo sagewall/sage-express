@@ -2,6 +2,7 @@ extends layout
 
 block stylesheets
   link(rel='stylesheet', href='//api.mapbox.com/mapbox-gl-js/v0.19.1/mapbox-gl.css')
+  link(rel='stylesheet', href='//api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.1.0/mapbox-gl-geocoder.css')
   link(rel='stylesheet', href='/stylesheets/darkskies.css')
 
 block content
@@ -14,4 +15,5 @@ block content
 
 block javascripts
   script(src='https://api.mapbox.com/mapbox-gl-js/v0.19.1/mapbox-gl.js')
+  script(src='//api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.1.0/mapbox-gl-geocoder.js')
   script(src='/javascripts/darkskies.js')
