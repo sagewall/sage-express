@@ -1,13 +1,46 @@
-mapboxgl.accessToken = 'pk.eyJ1Ijoic2FnZXdhbGwiLCJhIjoiMjRhNDExZWMwY2M1NzFlOTYxZWJjNjRiZTBhZGQ2NDEifQ.85AyZco3_blL_yZ0dv3Bog';
-var map = new mapboxgl.Map({
-  container: 'mapDiv',
-  style: 'mapbox://styles/sagewall/cip04ztds0002biksiuzb0ujm'
+require([
+  'esri/views/MapView',
+  'esri/WebMap',
+  'esri/widgets/Search',
+  'esri/widgets/Locate',
+  'dojo/domReady!'
+], function(
+  MapView,
+  WebMap,
+  Search,
+  Locate
+) {
+
+  var webmap = new WebMap({
+    portalItem: { // autocasts as new PortalItem()
+      id: 'f19c8d3bd088429081589669094ebdec'
+    }
+  });
+
+  var view = new MapView({
+    map: webmap,
+    container: 'viewDiv'
+  });
+  view.then(function(){
+    var searchWidget = new Search({
+      view: view
+    });
+    searchWidget.startup();
+
+    view.ui.add(searchWidget, {
+      position: "top-left",
+      index: 0
+    });
+
+    var locateBtn = new Locate({
+      view: view
+    });
+    locateBtn.startup();
+
+    // Add the locate widget to the top left corner of the view
+    view.ui.add(locateBtn, {
+      position: "top-left",
+      index: 1
+    });
+  });
 });
-
-map.addControl(new mapboxgl.Geolocate({
-  position: 'bottom-left'
-}));
-
-map.addControl(new mapboxgl.Geocoder({
-  position: 'top-left'
-}));
