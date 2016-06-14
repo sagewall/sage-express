@@ -12,7 +12,7 @@ require([
              LayerList,
              TimeExtent,
              TimeSlider) {
-  arcgisUtils.createMap('3e9b8ac2ed2244bd812f639fe62a5ccb', 'mapDiv').then(function (response) {
+  arcgisUtils.createMap('1962263a388d4e8e8bb363f908b078fa', 'mapDiv').then(function (response) {
     var map = response.map;
     var searchOptions = {
       map: map
@@ -33,7 +33,7 @@ require([
     var timeSlider = new TimeSlider({
       style: 'width: 100%;'
     }, 'timeSliderDiv');
-    var snowLayer = map.getLayer('NDFD_SnowFall_5192');
+    var snowLayer = map.getLayer('NDFD_SnowFall_6734');
     var timeExtent = snowLayer.timeInfo.timeExtent;
     $('.start-time').text(timeExtent.startTime.toLocaleString());
     $('.end-time').text(timeExtent.endTime.toLocaleString());
