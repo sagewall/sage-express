@@ -1,0 +1,16 @@
+extends layout
+
+block stylesheets
+  link(rel='stylesheet', href='//api.mapbox.com/mapbox.js/v2.4.0/mapbox.css')
+  link(rel='stylesheet', href='/stylesheets/parcels.css')
+
+block content
+  h1 Parcels
+  .container
+    .row
+      .col-sm-12
+        #mapDiv
+
+block javascripts
+  script(src='//api.mapbox.com/mapbox.js/v2.4.0/mapbox.js')
+  script(src='/javascripts/parcels.js')
