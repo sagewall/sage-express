@@ -8,10 +8,12 @@ block content
   .container
     .row
       .col-sm-6
-        h2 Current WU Radar
+        a(href='http://www.wunderground.com')
+          img(src='/images/wunderground.jpg')
         img(src='//api.wunderground.com/api/1f8c5d8b0f435e87/radar/image.gif?centerlat=39.755543&centerlon=-105.2211&radius=50&width=400&height=400&newmaps=1&rainsnow=1&noclutter=1&smooth=1', alt='Current Radar')
       .col-sm-6
-        h2 Forecast.io
+        h2 Forecast
+          p #[a(href='http://forecast.io/#/f/40.7142,-74.0064') Powered by Forecast]
           h3 Currently
             p.io-currently-summary
           h3 Soon
@@ -22,11 +24,11 @@ block content
             p.io-daily-summary
     .row
       .col-sm-12
-        h3 Today's WU Forecast
+        h3 Today's Weather Underground Forecast
         .wu-today
     .row
       .col-sm-12
-        h3 Tomorrow's WU Forecast
+        h3 Tomorrow's Weather Underground Forecast
         .wu-tomorrow
 
 block javascripts
