@@ -6,21 +6,11 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var sass = require('node-sass-middleware');
 var autoprefixer = require('express-autoprefixer');
-var mongo_express = require('mongo-express/lib/middleware');
-var mongo_express_config = require('./db/config.js');
 var index = require('./routes/index');
-var projects = require('./routes/projects');
-var resume = require('./routes/resume');
-var hazards = require('./routes/hazards');
-var snowfall = require('./routes/snowfall');
-var historic = require('./routes/historic');
-var api = require('./routes/api');
-var weather = require('./routes/weather');
-var darkskies = require('./routes/darkskies');
-var parcels = require('./routes/parcels');
+
 
 var app = express();
-app.set('env', 'development');
+app.set('env', 'production');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -45,17 +35,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Express Routes
 app.use('/', index);
-app.use('/projects', projects);
-app.use('/resume', resume);
-app.use('/hazards', hazards);
-app.use('/snowfall', snowfall);
-app.use('/historic', historic);
-app.use('/api', api);
-app.use('/weather', weather);
-app.use('/darkskies', darkskies);
-app.use('/parcels', parcels);
-
-app.use('/mongo', mongo_express(mongo_express_config));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
