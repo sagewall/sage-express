@@ -33,4 +33,8 @@ router.get('/weather', function(req, res) {
   res.render('weather');
 });
 
+router.get('/molly', function(req, res) {
+  res.render('molly');
+});
+
 module.exports = router;
