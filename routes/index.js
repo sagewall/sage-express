@@ -5,10 +5,6 @@ router.get('/', function(req, res) {
   res.render('index');
 });
 
-router.get('/darkskies', function(req, res) {
-  res.render('darkskies');
-});
-
 router.get('/hazards', function(req, res) {
   res.render('hazards');
 });
