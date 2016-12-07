@@ -13,10 +13,12 @@ map.on('click', function (e) {
         console.log('No historic places found');
     } else {
         $.each(features, function (index, feature) {
-            new mapboxgl.Popup()
-                .setLngLat(map.unproject(e.point))
-                .setHTML(feature.properties.description)
-                .addTo(map);
+            $('#info').html(feature.properties.description)
         });
     }
+});
+
+map.on('mousemove', function (e) {
+    var features = map.queryRenderedFeatures(e.point, {layers: ['historic-places']});
+    map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
 });
