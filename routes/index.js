@@ -33,4 +33,8 @@ router.get('/molly', function(req, res) {
   res.render('molly');
 });
 
+router.get('/historic', function(req, res) {
+    res.render('historic');
+});
+
 module.exports = router;
