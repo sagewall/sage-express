@@ -8,17 +8,17 @@ var map = new mapboxgl.Map({
 });
 
 map.on('click', function (e) {
-    var features = map.queryRenderedFeatures(e.point, {layers: ['historic-places']});
+    var features = map.queryRenderedFeatures(e.point, {layers: ['historic-place']});
     if (!features.length) {
-        console.log('No historic places found');
+        console.log('No historic place found');
     } else {
         $.each(features, function (index, feature) {
-            $('#info').html(feature.properties.description)
+            $('#info').html(feature.properties.Description)
         });
     }
 });
 
 map.on('mousemove', function (e) {
-    var features = map.queryRenderedFeatures(e.point, {layers: ['historic-places']});
+    var features = map.queryRenderedFeatures(e.point, {layers: ['historic-place']});
     map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
 });
