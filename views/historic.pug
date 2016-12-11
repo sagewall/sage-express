@@ -5,15 +5,14 @@ block stylesheets
   link(rel='stylesheet', href='/stylesheets/historic.css')
 
 block content
-  h1 Historic Places
+  h1 Jefferson County Colorado Historic Places
   .container
-    .row
-      .col-sm-9
-        p Still working on this one...Eventually I'll get to it.
+    .row.map-row
+      .col-sm-8
         #mapDiv
         p Data obtained from #[a(href='http://www.historycolorado.org/oahp/jefferson-county') History Colorado]
-      .col-sm-3
-        #info
+      .col-sm-4
+        #info.well Click historic places on map to see a description.
 
 block javascripts
   script(src='//api.tiles.mapbox.com/mapbox-gl-js/v0.20.1/mapbox-gl.js')

@@ -10,7 +10,7 @@ var map = new mapboxgl.Map({
 map.on('click', function (e) {
     var features = map.queryRenderedFeatures(e.point, {layers: ['historic-place']});
     if (!features.length) {
-        console.log('No historic place found');
+        $('#info').html('Click historic places on map to see a description.')
     } else {
         $.each(features, function (index, feature) {
             $('#info').html(feature.properties.Description)
