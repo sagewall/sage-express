@@ -6,7 +6,7 @@
 
 var app = require('../app');
 var debug = require('debug')('sage-express:server');
-var https = require('https');
+var http = require('http');
 var fs = require('fs');
 var path = require('path');
 
@@ -18,36 +18,10 @@ var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 /**
- * Create HTTPS server.
+ * Create HTTP server.
  */
-var options = {
-  key: fs.readFileSync(path.join(__dirname, '../cert', 'server.key')),
-  cert: fs.readFileSync(path.join(__dirname, '../cert', 'server.crt')),
-  ca: [
-    fs.readFileSync(path.join(__dirname, '../cert', 'COMODORSAAddTrustCA.crt')),
-    fs.readFileSync(path.join(__dirname, '../cert', 'COMODORSADomainValidationSecureServerCA.crt'))
-  ],
-  ciphers: [
-    "ECDHE-RSA-AES256-SHA384",
-    "DHE-RSA-AES256-SHA384",
-    "ECDHE-RSA-AES256-SHA256",
-    "DHE-RSA-AES256-SHA256",
-    "ECDHE-RSA-AES128-SHA256",
-    "DHE-RSA-AES128-SHA256",
-    "HIGH",
-    "!aNULL",
-    "!eNULL",
-    "!EXPORT",
-    "!DES",
-    "!RC4",
-    "!MD5",
-    "!PSK",
-    "!SRP",
-    "!CAMELLIA"
-  ].join(':'),
-  honorCipherOrder: true
-};
-var server = https.createServer(options, app);
+
+var server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
@@ -78,7 +52,7 @@ function normalizePort(val) {
 }
 
 /**
- * Event listener for HTTPS server "error" event.
+ * Event listener for HTTP server "error" event.
  */
 
 function onError(error) {
@@ -106,7 +80,7 @@ function onError(error) {
 }
 
 /**
- * Event listener for HTTPS server "listening" event.
+ * Event listener for HTTP server "listening" event.
  */
 
 function onListening() {
