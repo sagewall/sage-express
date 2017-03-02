@@ -3,7 +3,7 @@ $.getJSON('//api.wunderground.com/api/1f8c5d8b0f435e87/forecast/q/CO/Golden.json
   $('.wu-tomorrow').html(data.forecast.txt_forecast.forecastday[1].fcttext);
 });
 
-darkSkyUrl = '//api.darksky.net/forecast/76e613916d6f9b5d1ee8447f2aa73bc5/39.7555,-105.2211';
+darkSkyUrl = 'https://api.darksky.net/forecast/76e613916d6f9b5d1ee8447f2aa73bc5/39.7555,-105.2211';
 
 $.ajax({
   dataType: "jsonp",
