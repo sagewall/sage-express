@@ -8,11 +8,12 @@ var sass = require('node-sass-middleware');
 var autoprefixer = require('express-autoprefixer');
 var index = require('./routes/index');
 var helmet = require('helmet');
-
+var compression = require('compression');
 
 var app = express();
 app.set('env', 'production');
 app.use(helmet());
+app.use(compression());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
