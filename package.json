@@ -15,7 +15,7 @@
     "compression": "^1.6.2",
     "cookie-parser": "^1.4.3",
     "debug": "^2.6.4",
-    "express": "^4.15.2",
+    "express": "^4.15.3",
     "express-autoprefixer": "^5.1.1",
     "helmet": "^3.5.0",
     "morgan": "^1.7.0",
