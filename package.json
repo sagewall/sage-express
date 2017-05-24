@@ -11,19 +11,19 @@
   },
   "dependencies": {
     "autoprefixer": "^6.7.7",
-    "body-parser": "^1.17.1",
+    "body-parser": "^1.17.2",
     "compression": "^1.6.2",
     "cookie-parser": "^1.4.3",
-    "debug": "^2.6.4",
+    "debug": "^2.6.7",
     "express": "^4.15.3",
     "express-autoprefixer": "^5.1.1",
-    "helmet": "^3.5.0",
-    "morgan": "^1.7.0",
+    "helmet": "^3.6.1",
+    "morgan": "^1.8.2",
     "node-sass-middleware": "^0.9.8",
     "postcss": "^5.2.17",
     "pug": "^2.0.0-beta9",
-    "serve-favicon": "^2.4.2",
-    "snyk": "^1.29.0"
+    "serve-favicon": "^2.4.3",
+    "snyk": "^1.30.0"
   },
   "devDependencies": {
     "snyk": "^1.28.1"
