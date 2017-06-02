@@ -1,7 +1,6 @@
 .idea/
 .git/
 *.env
-*.snyk
 node_modules/
 public/stylesheets/*.css
 public/stylesheets/*.css.map
